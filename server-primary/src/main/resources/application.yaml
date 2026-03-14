@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: server-primary
+
+server:
+  port: 8080
+  own-url: http://localhost:8080
+
+# URL do Gateway para descoberta do líder no boot
+gateway:
+  url: http://localhost:8090
