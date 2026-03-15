@@ -5,10 +5,7 @@
 
 ---
 
-## 👥 Integrantes
 
-| Nome | Matrícula |
-|------|-----------|
 | André Lima Vieira | 2214650 |
 | Leonardo Farias Macieira | 2110937 |
 
