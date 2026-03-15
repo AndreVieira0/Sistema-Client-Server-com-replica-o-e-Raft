@@ -1,14 +1,5 @@
 # 🖧 Sistema Cliente-Servidor com Replicação e Eleição de Líder (Raft)
 
-> Trabalho de Computação Distribuída — Universidade de Fortaleza (UNIFOR)  
-> Turma: T335-16 | Professor: Ildo Ramos Vieira
-
----
-
-
-| André Lima Vieira | 2214650 |
-| Leonardo Farias Macieira | 2110937 |
-
 ---
 
 ## 📋 Sobre o Projeto
@@ -130,7 +121,7 @@ Quando um nó reinicia, o `SyncOnStartupService` executa no `@PostConstruct`:
 ### Ordem de inicialização (obrigatória)
 
 ```
-1º → gateway-service   (GatewayApplication.java)    porta 8090
+1º → gateway-service   (GatewayApplication.java)      porta 8090
 2º → server-primary    (ServerPrimaryApplication.java) porta 8080
 3º → server-replica    (ServerReplicaApplication.java) porta 8081
 4º → server-replica2   (ServerReplicaApplication.java) porta 8082
@@ -142,7 +133,6 @@ Quando um nó reinicia, o `SyncOnStartupService` executa no `@PostConstruct`:
 ### Limpando dados entre testes
 
 ```powershell
-# No terminal de cada módulo
 Remove-Item database.txt -ErrorAction SilentlyContinue          # server-primary
 Remove-Item database-replica.txt -ErrorAction SilentlyContinue  # server-replica
 Remove-Item database-replica2.txt -ErrorAction SilentlyContinue # server-replica2
@@ -209,18 +199,3 @@ Sistema-Client-Server/
     ├── UserRepositoryReplica2.java
     └── SyncOnStartupService.java
 ```
-
----
-
-## 📊 Critérios de Avaliação
-
-| Critério | Pontos | Status |
-|----------|--------|--------|
-| Arquitetura correta | 2 | ✅ |
-| Nova réplica implementada | 2 | ✅ |
-| Replicação funcionando | 2 | ✅ |
-| Gateway implementado | 2 | ✅ |
-| Eleição de líder | 1 | ✅ |
-| Sincronização da primária | 1 | ✅ |
-| **Total** | **10** | ✅ |
-| Bônus — Eleição Raft | Extra | ✅ |
